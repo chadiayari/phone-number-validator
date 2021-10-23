@@ -12,12 +12,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
+import { DialogOverviewExampleDialog } from './contact/contact.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    IndexComponent
+    IndexComponent,
+    DialogOverviewExampleDialog
   ],
   imports: [
     BrowserModule,
@@ -30,6 +33,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatSelectModule,
     MatInputModule,
     MatButtonModule,
+    FontAwesomeModule,
 
   ],
   providers: [],

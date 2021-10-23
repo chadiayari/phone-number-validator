@@ -1,0 +1,34 @@
+img.mainPicture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
+.title{
+text-align: center;
+}
+
+a{
+    font-style: italic;
+    color: white;
+    font-weight: 200;
+}
+
+a:active {
+    color: #c2185b;
+}
+
+a[tabindex]:focus {
+    color:#c2185b;
+    outline: none;
+}
+
+li{
+    font-weight: 400;
+}
+
+button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

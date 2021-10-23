@@ -49,7 +49,8 @@ li, a, button {
 }
 
 .nav_links li a:hover {
-  color: #673ab7;
+  color: #c2185b;
+  transition: all 0.3s ease 0s;
 }
 
 button {
@@ -61,5 +62,5 @@ button {
 }
 
 button:hover {
-  background-color: rgba(103, 58, 183, 0.85);
+  background-color: rgba(194,24,91, 0.85);
 }
