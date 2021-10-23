@@ -1,34 +1,33 @@
-img.mainPicture {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 50%;
-}
-.title{
-text-align: center;
+
+div {
+  text-align: center;
+  padding: 5px;
 }
 
-a{
-    font-style: italic;
-    color: white;
-    font-weight: 200;
+img.mainPicture {
+  margin-left: auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+
+}
+
+a {
+  font-style: italic;
+  color: white;
+  font-weight: 200;
 }
 
 a:active {
-    color: #c2185b;
+  color: #c2185b;
 }
 
-a[tabindex]:focus {
-    color:#c2185b;
-    outline: none;
+.icon {
+
+    padding: 20px;
+  font-size: 25px;
 }
 
-li{
-    font-weight: 400;
-}
-
-button {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+button{
+    margin-top: 7%;
 }
