@@ -1,0 +1,27 @@
+<!-- Container -->
+<div class="mainContainer">
+    <div class="form-group">
+        <h1>PHONE NUMBER VALIDATOR</h1>
+        <!-- Country Code Selection -->
+        <mat-form-field [formGroup]="validationForm" (ngSubmit)="validate()" id="matFormField">
+            <mat-label>Country Code</mat-label>
+            <mat-select id="codeSelect" formControlName="codeSelect">
+                <mat-option *ngFor="let c of countries" [value]="c.country_code">
+                    {{c.country_code}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br />
+        <!-- Phone Number Input -->
+        <mat-form-field [formGroup]="validationForm">
+            <mat-label>Phone Number</mat-label>
+            <input matInput type="text" formControlName="number" id="mobile_number" placeholder="Ex. 32 111 3321">
+            <mat-error>Please enter a valid phone number</mat-error>
+        </mat-form-field>
+    </div>
+    <!-- Verification Button -->
+    <div class="validate">
+        <button mat-raised-button type="submit" color="primary" [disabled]="validationForm.valid"
+            class="btn">Verify</button>
+    </div>
+</div>
