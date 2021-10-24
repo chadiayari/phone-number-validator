@@ -1,0 +1,31 @@
+div {
+  text-align: center;
+  padding: 5px;
+}
+
+img.mainPicture {
+  margin-left: auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+
+}
+
+a {
+  font-style: italic;
+  color: white;
+  font-weight: 200;
+}
+
+a:active {
+  color: #c2185b;
+}
+
+.icon {
+  padding: 20px;
+  font-size: 25px;
+}
+
+button {
+  margin-top: 7%;
+}
