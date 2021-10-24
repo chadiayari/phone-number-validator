@@ -31,14 +31,15 @@ export class NumbersService {
     number: "",
     valid: ""
   };
+  format=1;
   numberDetails: NumberDetails;
 
   constructor(private http: HttpClient) { }
-  public verifyNumber(num: string, code: string) {
+  public verifyNumber(num: any, code: any) {
 
     this.number = num;
     this.country_code = code;
-    return this.http.get<any>(this.apiUrl + "/validate?access_key=" + this.accessKey + "&number=" + this.number + "&country_code" + this.country_code + "&format=1",
+    return this.http.get<any>(this.apiUrl + "/validate?access_key=" + this.accessKey + "&number=" + this.number + "&country_code" + this.country_code + this.format,
       { observe: 'response' });
   }
 
