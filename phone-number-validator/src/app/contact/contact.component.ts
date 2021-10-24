@@ -15,7 +15,6 @@ export interface DialogData {
   styleUrls: ['./contact.component.css']
 })
 export class DialogOverviewExampleDialog {
-
   faLinkedin = faLinkedin;
   faWhatsapp = faWhatsapp;
   faEnvelope = faEnvelope;
@@ -23,6 +22,7 @@ export class DialogOverviewExampleDialog {
     public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData) { }
 
+  //close button action
   onNoClick(): void {
     this.dialogRef.close();
   }

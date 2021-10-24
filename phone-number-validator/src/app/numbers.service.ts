@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 export interface NumberDetails {
   valid: boolean,
@@ -27,28 +27,32 @@ export class NumbersService {
   accessKey = "eb588dbf70cb81df1c8d374269db9d18";
   number = "";
   country_code = "";
+  dialling_code = "";
+  format = 1;
+  numberDetails: NumberDetails;
   validationResult = {
     number: "",
     valid: ""
   };
-  format=1;
-  numberDetails: NumberDetails;
 
   constructor(private http: HttpClient) { }
-  public verifyNumber(num: any, code: any) {
 
+  //verifies phone number from API
+  public verifyNumber(num: any, code: any, diallingCode: any) {
     this.number = num;
     this.country_code = code;
-    return this.http.get<any>(this.apiUrl + "/validate?access_key=" + this.accessKey + "&number=" + this.number + "&country_code" + this.country_code + this.format,
+    this.dialling_code = diallingCode;
+    return this.http.get<any>(this.apiUrl + "/validate?access_key=" + this.accessKey + "&number=" + this.number + this.dialling_code + "&country_code" + this.country_code + this.format,
       { observe: 'response' });
   }
 
+  //Set correct number format
   public setNumberDetails(numberD: NumberDetails) {
     this.numberDetails = numberD;
   }
 
+  //fetches country codes from API
   public getCountryCodes() {
-    console.log("sending request", this.apiUrl + "/countries" + "?access_key=" + this.accessKey)
     return this.http.get<any>(this.apiUrl + "/countries" + "?access_key=" + this.accessKey);
   }
 }

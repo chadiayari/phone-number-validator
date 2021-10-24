@@ -19,10 +19,9 @@ h1 {
   padding-bottom: 5%;
 }
 
-#mobile_number{
-  color:white;
+#mobile_number {
+  color: white;
 }
-
 
 .validate {
   text-align: center;
@@ -33,7 +32,6 @@ h1 {
   width: 35%;
   border-radius: 8px;
   margin-top: 1%;
-
 }
 
 .form-group {

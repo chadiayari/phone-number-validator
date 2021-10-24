@@ -7,7 +7,6 @@
             <mat-form-field [formGroup]="validationForm" id="matFormField">
                 <mat-label>Country Code</mat-label>
                 <mat-select id="codeSelect" formControlName="codeSelect" [(ngModel)]="selectedOption" (selectionChange)="selection(selectedOption)">
-                    <p>{{selectedOption}}</p>
                     <mat-option *ngFor="let c of countries" [value]="c.country_code">
                         {{c.country_code}}
                     </mat-option>
@@ -17,15 +16,13 @@
             <!-- Phone Number Input -->
             <mat-form-field [formGroup]="validationForm">
                 <mat-label>Phone Number</mat-label>
-                <input matInput type="text" formControlName="number" id="mobile_number" placeholder="Ex. 32 111 3321" [(ngModel)]="diallingCodeInput">
-                <mat-error>Please enter a valid phone number</mat-error>
-
+                <input matInput type="text" formControlName="dialling_code" id="mobile_number" value='+{{phoneCountryPrefix}} '>
+                <mat-error>Input incorrect</mat-error>
             </mat-form-field>
         </div>
         <!-- Verification Button -->
         <div class="validate">
-            <button mat-raised-button type="submit" color="primary" [disabled]="validationForm.valid"
-                class="btn">Verify</button>
+            <button mat-raised-button type="submit" color="primary" class="btn">Verify</button>
         </div>
     </form>
 </div>

@@ -34,7 +34,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     MatInputModule,
     MatButtonModule,
     FontAwesomeModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]
